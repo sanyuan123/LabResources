@@ -12,7 +12,7 @@ We will use Anaconda Python 3 for assignments. If you are a Python expert, and b
 
 An important virtue of Anaconda Python is the `conda` command that it installs. `conda` is a package manager that maintains *conda environments* comprising Python packages and (importantly!) other software packages and libraries, ensuring they interact properly, and isolating them from other versions that may be on your system. So if you have another version of Python already on your system, you should be able to install the course's environment without creating conflicts with other software.
 
-See the [**PythonForBDA**](**PythonForBDA.md**) document (in this repo) for instructions on how to install the BDA `conda` environment; it includes a flowchart to guide you through the process.
+See the [**PythonForBDA**](PythonForBDA.md) document (in this repo) for instructions on how to install the BDA `conda` environment; it includes a flowchart to guide you through the process.
 
 ## Assignment submission
 
