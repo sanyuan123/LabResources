@@ -1,6 +1,8 @@
 # Python
 
-We will make heavy use of the Python high-level computing language, specifically the CPython-3.6 implementation (usually just called Python-3.6; the "C" indicates it's implemented in the C language). We will also use many Python packages that are not part of Python itself, particularly the collection of packages known colloquially as the **PyData stack** (e.g., packages providing fast numerical computing capability, plotting, and of course statistical computing tools; see [PyData - Downloads](https://pydata.org/downloads.html) for a list).
+[**Warning:** At the moment this document is somewhat preliminary. Parts have been updated, but we are still checking some of the links. This paragraph will be removed when the links are verified.]
+
+We will make heavy use of the Python high-level computing language, specifically the CPython-3.7 implementation (usually just called Python-3.7; the "C" indicates it's implemented in the C language). We will also use many Python packages that are not part of Python itself, particularly the collection of packages known colloquially as the **PyData stack** (e.g., packages providing fast numerical computing capability, plotting, and of course statistical computing tools; see [python - The PyData Ecosystem - Stack Overflow](https://stackoverflow.com/questions/18168400/the-pydata-ecosystem) for a list).
 
 A **Python distribution** is a software bundle that provides Python along with a curated set of third-party libraries.
 If your operating system has Python built in, you probably still want to install a new distribution; please read on.
@@ -14,10 +16,10 @@ You can install a new version of Python by itself, and install and maintain the 
 
 ## Anaconda Python distribution
 
-I strongly recommend that all BDA students use the **Anaconda Python distribution** (the Python-3.6 version), a distribution specifically assembled to support data science.
+We strongly recommend that all BDA students use the **Anaconda Python distribution** (the Python-3.7 version), a distribution specifically assembled to support data science.
 It is free, contains most of the software we need, and provides package management and virtual environment capabilities not readily available otherwise, via the included **`conda` package management system**. It supplies compiled binary libraries built with optimized compilers that you may not have easy access to.  It is also very popular.
 
-I will help with installation and operation issues only for Anaconda Python. It requires about 3 GB of disk space for a new installation. It may take a while to download and install everything; budget time for this appropriately.
+We will help with installation and operation issues only for Anaconda Python. It requires a few GB of disk space for a new installation. It may take a while to download and install everything; budget time for this appropriately.
 
 The [Anaconda Distribution main page](https://www.anaconda.com/distribution/) provides a graphic showing you the data science content included in the distribution, and a prominent link to downloads for Windows, macOS, and Linux.
 
@@ -32,7 +34,7 @@ To set up Anaconda for STSCI 4780, follow the flowchart below. You will have to 
 
 ### Install Anaconda with Python 3
 
-Visit [Downloads | Anaconda](https://www.anaconda.com/download/) to download an installer for your platform. Select the Python-3.6 version. Follow the instructions for your platform, linked here: [Regular Installation — Conda documentation](https://conda.io/docs/user-guide/install/index.html#regular-installation). *Ignore the Miniconda option*; you should install the full Anaconda distribution if the flowchart led you here. As noted in the instructions, if you are asked about settings you aren't sure about, just accept the defaults.
+Visit [Downloads | Anaconda](https://www.anaconda.com/download/) to download an installer for your platform. Select the Python-3.7 version. Follow the instructions for your platform, linked here: [Installation — conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html). *Ignore the Miniconda option*; you should install the full Anaconda distribution if the flowchart led you here. As noted in the instructions, if you are asked about settings you aren't sure about, just accept the defaults.
 
 Just follow the first part of those instructions. You may stop when you reach "silent mode" instructions (don't follow those instructions).
 
@@ -41,10 +43,10 @@ Just follow the first part of those instructions. You may stop when you reach "s
 
 ### Install Miniconda with Python 3
 
-This option installs a subset of the full Anaconda distribution, so as not to interfere with other Python content you may have on your computer. You will add further content later, in a protected *conda environment*. I'm not 100% sure this will not affect all other Python installations, but it's likely to work. If you are concerned about this, have a look at: [Installing conda on a system that has other Python installations — Conda documentation](https://conda.io/docs/user-guide/install/index.html#installing-conda-on-a-system-that-has-other-python-installations-or-packages).
+This option installs a subset of the full Anaconda distribution, so as not to interfere with other Python content you may have on your computer. You will add further content later, in a protected *conda environment*. I'm not 100% sure this will not affect all other Python installations, but it's likely to work. If you are concerned about this, have a look at: [[Installing conda on a system that has other Python installations or packages](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#installing-conda-on-a-system-that-has-other-python-installations-or-packages).
 
-* Visit the [Regular Installation documentation](https://conda.io/docs/user-guide/install/index.html#regular-installation), and follow the Miniconda link for your platform.
-* Download the installer that includes Python-3.6.
+* Visit the [Regular installation documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation), follow the link for your platform, and get the Miniconda installer.
+* Download the installer that includes Python-3.7.
 * Follow the remaining instructions. Windows users will launch a standard `.exe` installer. Linx and macOS users will have to run a command-line command to do the installation.
 
 
@@ -61,50 +63,48 @@ To update `conda`:
 * Simply run `conda update conda`.  Accept any changes it offers to make.
 
 
-### Create the bda18 environment
+### Create the bda20 environment
 
 This step is necessary for users who had to install Miniconda. Users who installed the full Anaconda distribution will probably have no problem working the default (base) environment, at least for the first half of the course.  But the safest way to work is to compartmentalize work for this course using a `conda` environment, so I recommend that **all users** do this step.
 
 In a terminal session (you need not be in any specific location), enter this command (it may take a while to finish, especially if you installed Miniconda instead of the full Anaconda):
 
 ```
-conda create -n bda18 python=3.6 anaconda
+conda create -n bda20 python=3.7 anaconda
 ```
 
-This creates an environment named `bda18` that has access to the full Anaconda distribution using Python-3.6.  Later, we'll be adding other packages to this environment.  By working in an environment, we can make sure that any changes we make don't impact any other Python work you may do.
+This creates an environment named `bda20` that has access to the full Anaconda distribution using Python-3.7.  Later, we'll be adding other packages to this environment.  By working in an environment, we can make sure that any changes we make don't impact any other Python work you may do.
 
-_**NOTE THE FOLLOWING:**_ You will need to activate the `bda18` environment every time you do work for the course (including when you launch Jupyter notebooks). So memorize the instructions below (but don't execute them right now).
+_**NOTE THE FOLLOWING:**_ You will need to activate the `bda20` environment every time you do work for the course (including when you launch Jupyter notebooks). So memorize the instructions below (but don't execute them right now).
 
 FYI: Activation runs a shell script that changes environment variables in the current shell that tell the shell where to find commands and other resources.  This will sometimes display a lot of environment variable values on your terminal; this is fine (as long as there are no errors).
 
 **To activate the environment:**
 
-*  On macOS and Linux, in your Terminal Window, use the shell's `source` command (which runs a script in the current shell session); type:
+*  On macOS and Linux, in your Terminal Window, or on Windows, in Anaconda Prompt; run:
   ```
-  source activate bda18
+  conda activate bda20
   ```
-* On Windows, in Anaconda Prompt, run:
-  ```
-  activate bda18
-  ```
+  
 
 **To deactivate the environment:**
 
-* On macOS and Linux, in your Terminal Window, run:
-  `source deactivate`
-* On Windows, in Anaconda Prompt, run:
-  `deactivate`
+* In your Terminal Window or in Anaconda Prompt, run:
+  `conda deactivate`
+  
 
-Activating an environment *only affects the current terminal session in which you entered the command*. You probably won't need to deactivate `bda18` often (if at all). When you close your terminal or Anaconda Prompt session, the environment settings will be forgotten.
+Activating an environment *only affects the current terminal session in which you entered the command*. You probably won't need to deactivate `bda20` often (if at all). When you close your terminal or Anaconda Prompt session, the environment settings will be forgotten.
+
+(Windows users who have used Anaconda in the past but not recently should note that the environment commands have changed; the Windows command to activate an environment used to be `activate bda20`, and to deactivate it, `deactivate`.)
 
 
 ### Check the installation
 
 Check that three key components work:
 
-* Launch a terminal and activate `bda18`.
-* Run the **Python interpreter** by typing `python` and hitting `return`. It should type out a line or two of info identifying itself as Python 3.6.x  (for some "x"); it will also likely identify itself as being part of Anaconda.  It will show the Python prompt:  `>>>`. At this point, you can type `Ctl-D` to quit—or play with Python if you wish.
-* Run the **IPython interpreter**. This is a souped-up Python interpreter.  Type `ipython` and hit `return`. This time the message will identify the IPython version (5.x.y) and the Python version, and end with the IPython prompt, `In [1]:`.  As with Python, `Ctl-D` quits (though it may prompt to verify you want to quit).
+* Launch a terminal and activate `bda20`.
+* Run the **Python interpreter** by typing `python` and hitting `return`. It should type out a line or two of info identifying itself as Python 3.7.x  (for some "x"); it will also likely identify itself as being part of Anaconda.  It will show the Python prompt:  `>>>`. At this point, you can type `Ctl-D` to quit—or play with Python if you wish.
+* Run the **IPython interpreter**. This is a souped-up Python interpreter.  Type `ipython` and hit `return`. This time the message will identify the IPython version (7.x.y) and the Python version, and end with the IPython prompt, `In [1]:`.  As with Python, `Ctl-D` quits (though it may prompt to verify you want to quit).
 * Finally, check that the **Jupyter notebook** system works.  Type `jupyter notebook` and hit `return`.  This should open a tab in your default web browser—the notebook works in a web browser. You may then quit Jupyter notebook in two steps:  Close the browser tab, and then back in the terminal session, type `Ctl-C` and verify you want to end the Jupyter session.
 
 If all of that works, you should be ready to go for Python- and Jupyter-based assignments.
