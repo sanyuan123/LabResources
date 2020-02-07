@@ -12,7 +12,7 @@ We will use Anaconda Python 3 for assignments. If you are a Python expert, and b
 
 An important virtue of Anaconda Python is the `conda` command that it installs. `conda` is a package manager that maintains *conda environments* comprising Python packages and (importantly!) other software packages and libraries, ensuring they interact properly, and isolating them from other versions that may be on your system. So if you have another version of Python already on your system, you should be able to install the course's environment without creating conflicts with other software.
 
-See the [**PythonForBDA**](PythonForBDA.md) document (in this repo) for instructions on how to install the BDA `conda` environment; it includes a flowchart to guide you through the process.
+See the [**PythonForBDA**](PythonForBDA.md) document (in this repo) for instructions on how to install the BDA `conda` environment; it includes a flowchart to guide you through the process.
 
 ## Assignment submission
 
@@ -24,7 +24,7 @@ Please follow these instructions to work on your assignment solutions and submit
 
 2. Work on the assignment in your repo.  For each working session:
     * Open a terminal session with the assignment folder in your repo as the working directory.
-    * Activate the `bda18` conda environment.
+    * Activate the `bda20` conda environment.
     * Launch the Jupyter notebook server with the command: `jupyter noteboook`. This should open a tab in your default web browser with the Jupyter notebook interface, displaying content in your local assignment folder.
     * Edit the `SolutionsXX.ipynb` notebook with your solutions in new cells created below each problem.  Feel free to add and commit intermediate stages of your work as often as you like, and to push intermediate stages back to GitHub if you wish.
 
