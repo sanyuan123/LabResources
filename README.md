@@ -18,7 +18,7 @@ See the [**PythonForBDA**](PythonForBDA.md) document (in this repo) for instruct
 
 Please follow these instructions to work on your assignment solutions and submit them via GitHub.  "Your personal repo" here refers to the repo you used to submit the Assignment01 `README.md` file—the repo named according to your GitHub username.
 
-1. Create a folder in your personal repo named for the assignment, `AssignmentXX`.
+1. Create a folder in your personal repo named for the assignment, `AssignmentXX` (with `XX` replaced by `02`, `03`, etc.).
 
 1. After cloning or pulling the latest LabResources repo content, **copy** the `SolutionsXX.ipynb` template into the assignment folder in your personal repo.  If the assignment uses other resources (e.g., Python modules or data files), copy those as well.
 
